@@ -3,10 +3,17 @@ body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+#TopBanner {
+    height: 50px;
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    font-size: 1.2em;
+}
 #TopBanner img {
     float: right;
-    margin-top: 10px;
     position: relative;
     top: -75px;
     right: 30px;
+    
 }
