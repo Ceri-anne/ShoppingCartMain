@@ -2,8 +2,6 @@
 namespace Cart\App;
 include 'lib\cart\validation\cart_validation.php';
 
-
-
 use function Cart\Db\create_item, 
 			 Cart\Db\save_cart,
 			 Cart\Db\read_item_name;

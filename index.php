@@ -12,6 +12,7 @@ $view_vars = \Cart\App\add_item($cart);
 <html>
 <head>
     <title>Shopping Cart</title>
+    <link rel="icon" type="image/png"  href="img/shopping_cart_grey.png">
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
