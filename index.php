@@ -1,19 +1,7 @@
 <?php
-include 'lib/cart/app/cart_db.php';
-include 'lib/cart/app/cart_application.php';
-
-const TEMPLATE_EXTENSION = '.phtml';
-const TEMPLATE_FOLDER = 'templates/';
-const TEMPLATE_PREFIX = 'cart_view_';
-
-
-function display($template, $variables, $extension = TEMPLATE_EXTENSION) {
-	extract($variables);
-	
-	ob_start();
-	include TEMPLATE_FOLDER . TEMPLATE_PREFIX . $template . $extension;
-	return ob_get_clean();
-}
+include 'lib/cart/db/cart_db.php';
+include 'lib/cart/app/cart_app_application.php';
+include 'lib/cart/view/cart_view.php';
 
 $view_vars = \Cart\App\add_item($cart);
 
@@ -31,11 +19,13 @@ $view_vars = \Cart\App\add_item($cart);
     <h1>Shopping Cart</h1>
     <img src="img/shopping_cart_grey.png" alt="Shopping Cart">
 </div>
-    
-<?php echo display('user', ['users' => $users, 'cart' => $cart]); ?>
-<?php echo display('item', ['new_item' => $view_vars['new_item']]); ?>
-<?php echo display('items',  ['cart' => 
+
+
+<?php echo \Cart\View\display('user', ['users' => $users, 'cart' => $cart]); ?>
+<?php echo \Cart\View\display('item', ['new_item' => $view_vars['new_item']]); ?>
+<?php echo \Cart\View\display('items',  ['cart' => 
                 \Cart\Db\transform_items($cart, $callback)]); ?>
+
 
 <h1>All Users</h1>
 <?php foreach($users as $username => $user) {
