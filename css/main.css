@@ -1,0 +1,12 @@
+body {
+    color: #666666;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#TopBanner img {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+    top: -75px;
+    right: 30px;
+}

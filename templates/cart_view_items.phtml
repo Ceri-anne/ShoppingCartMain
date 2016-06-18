@@ -1,0 +1,24 @@
+
+	
+	
+<div>
+<h2>Cart</h2>
+
+<table>
+  <tr>
+      <td><strong>Item</strong></td>
+      <td><strong>Price</strong></td>
+  </tr>
+
+<?php foreach ($cart['items'] as $item) {
+    echo    '<tr>
+                <td>' . $item['name'] . '</td>
+                <td> £' . $item['price']. '</td>
+            </tr>';	
+} ?>
+    <tr>
+      <td><strong>Total</strong></td>
+      <td><strong><?php echo '£ ' . \Cart\Db\cart_total($cart);?></strong></td>
+    </tr>
+  </table>
+</div>
