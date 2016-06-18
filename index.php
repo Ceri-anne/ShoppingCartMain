@@ -1,6 +1,6 @@
 <?php
-include 'cart_db.php';
-include 'cart_application.php';
+include 'lib/cart/app/cart_db.php';
+include 'lib/cart/app/cart_application.php';
 
 const TEMPLATE_EXTENSION = '.phtml';
 const TEMPLATE_FOLDER = 'templates/';
