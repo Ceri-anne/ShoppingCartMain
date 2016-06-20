@@ -1,6 +1,9 @@
+/*#758ECD #A9BCD0 #E2AFDE #D9DBF1 #56667A*/
+
 body {
-    color: #666666;
+    color: #56667A;
     font-family: Verdana, Arial, Helvetica, sans-serif;
+
 }
 
 #TopBanner {
@@ -13,7 +16,6 @@ body {
 #TopBanner img {
     float: right;
     position: relative;
-    top: -75px;
     right: 30px;
     
 }

@@ -21,7 +21,7 @@ function add_item(&$cart) {
 	return ['new_item' => read_item_name($cart, 'HTC m8')];
 }
 
-function clean_up(&$users){
+function clean_up($users){
     foreach($users as $username => $user) {
             if(!postcode_valid($user['postcode'])) {
                     delete_user($users, $username);
@@ -29,4 +29,5 @@ function clean_up(&$users){
     }
 }
 
+clean_up($users);
 ?>
