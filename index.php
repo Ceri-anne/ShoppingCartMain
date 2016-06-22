@@ -5,6 +5,11 @@ include 'lib/cart/view/cart_view.php';
 
 $view_vars = \Cart\App\add_item($cart);
 
+
+$lowercase = function ($item) {
+	$item['name'] = strtolower($item['name']);
+	return $item;
+        };
 ?>
 
 
@@ -28,7 +33,7 @@ $view_vars = \Cart\App\add_item($cart);
 <section id="CartContents">
     <?php echo \Cart\View\display('item', ['new_item' => $view_vars['new_item']]); ?>
     <?php echo \Cart\View\display('items',  ['cart' => 
-                    \Cart\Db\transform_items($cart, $callback)]); ?>
+                    \Cart\Db\transform_items($cart, $lowercase)]); ?>
 </section>
 
 <section id="AllUsers">
